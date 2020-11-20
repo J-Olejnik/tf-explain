@@ -47,7 +47,7 @@ class IntegratedGradients:
 
         grid = grid_display(grayscale_integrated_gradients)
 
-        return grid
+        return grid, integrated_gradients
 
     @staticmethod
     @tf.function

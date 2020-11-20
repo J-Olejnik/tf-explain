@@ -26,6 +26,7 @@ class VanillaGradients:
                 to perform the method on. Tuple containing (x, y).
             model (tf.keras.Model): tf.keras model to inspect
             class_index (int): Index of targeted class
+            raw_grads (int): Returns raw gradients 
 
         Returns:
             numpy.ndarray: Grid of all the gradients
@@ -40,7 +41,7 @@ class VanillaGradients:
 
         grid = grid_display(grayscale_gradients)
 
-        return grid
+        return grid, gradients
 
     @staticmethod
     @tf.function

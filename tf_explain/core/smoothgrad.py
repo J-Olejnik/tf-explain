@@ -47,7 +47,7 @@ class SmoothGrad:
 
         grid = grid_display(grayscale_gradients)
 
-        return grid
+        return grid, smoothed_gradients
 
     @staticmethod
     def generate_noisy_images(images, num_samples, noise):
