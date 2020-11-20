@@ -41,7 +41,8 @@ def transform_to_normalized_grayscale(tensor):
     normalize01 = tf.keras.layers.Lambda(lambda G : (G - tf.reduce_min(G))/(tf.reduce_max(G)-tf.reduce_min(G)))
 
     normalized_tensor = tf.cast(
-        255 * normalize01(grayscale_tensor), tf.uint8
+        #255 * normalize01(grayscale_tensor), tf.uint8
+        normalize01(grayscale_tensor), tf.float32
     )
 
     return normalized_tensor
